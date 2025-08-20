@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Smart Info RDC - Témoignages">
+  <meta name="keywords" content="témoignages, Smart Info RDC, avis clients">
+  <meta name="author" content="Ir Bertin Gundimba Konzi">
+  <title>Témoignages | Smart Info RDC</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLAK8FfE/JpA12t5+1aN/c8a2b+l+k/s2lG/r5t6l/s5+t2lG/o1P9t1V8t5Fq/t2lG/q1P9t1V8t5Fq/" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Styles pour les témoignages */
+    #temoignages { margin: 20px 0; }
+    .temoignage { background: #f4f4f4; padding: 15px; margin: 10px 0; border-left: 5px solid #35424a; border-radius: 5px; }
+    .temoignage h3 { margin: 0; color: #35424a; }
+    .temoignage p { margin: 5px 0 0; }
+    
+    /* Styles pour le formulaire d'ajout */
+    #form-temoignage { margin-top: 30px; background: #35424a; padding: 15px; border-radius: 5px; color: #fff; }
+    #form-temoignage input, #form-temoignage textarea {
+      width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: none;
+    }
+    #form-temoignage button {
+      background: #e8491d; color: #fff; border: none; padding: 10px 20px;
+      cursor: pointer; border-radius: 5px; font-weight: bold;
+    }
+    #form-temoignage button:hover { background: #cf3c16; }
+
+    /* Styles pour les icônes de réseaux sociaux */
+    #social-media {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    #social-media a {
+        color: #fff;
+        font-size: 2em; /* Augmenter la taille des icônes */
+        transition: transform 0.3s ease-in-out;
+    }
+    #social-media a:hover {
+        transform: scale(1.2);
+        color: #e8491d; /* Changement de couleur au survol */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Smart Info RDC</span> Gemena</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li class="current"><a href="temoignages.html">Témoignages</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="newsletter">
+    <div class="container">
+      <h1>Inscrivez-vous à notre Newsletter</h1>
+      <form>
+        <input type="email" placeholder="Email..." required>
+        <button type="submit" class="button_1">S'inscrire</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="main">
+    <div class="container">
+      <article id="main-col">
+        <h1 class="page-title">Témoignages</h1>
+        
+        <div id="temoignages">
+          <div class="temoignage">
+            <h3>Jean-Pierre</h3>
+            <p>"Smart Info RDC m’a beaucoup aidé à améliorer mes compétences en informatique. Merci !"</p>
+          </div>
+          <div class="temoignage">
+            <h3>Alice</h3>
+            <p>"Une équipe sérieuse et professionnelle. Je recommande vivement leurs formations."</p>
+          </div>
+        </div>
+
+        <div id="form-temoignage">
+          <h2>Publiez votre témoignage</h2>
+          <input type="text" id="nom" placeholder="Votre nom" required>
+          <textarea id="message" placeholder="Votre témoignage..." required></textarea>
+          <button onclick="ajouterTemoignage()">Publier</button>
+        </div>
+      </article>
+
+      <aside id="sidebar">
+        <div class="dark">
+          <h3>Pourquoi vos témoignages ?</h3>
+          <p>Vos retours nous permettent d’améliorer nos services et d’inspirer d’autres apprenants.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <p>Smart Info RDC (Informatique intelligente pour la RDC), créé par Ir Bertin Gundimba Konzi &copy; 2025</p>
+    <div id="social-media">
+        <a href="https://www.facebook.com/bertin.gundimbakonzi" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.youtube.com/@SmartinfoRDC" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube-square"></i>
+        </a>
+        <a href="https://www.instagram.com/SmartInfoRDC/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram-square"></i>
+        </a>
+        <a href="https://wa.me/2439735651385" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp-square"></i>
+        </a>
+    </div>
+  </footer>
+
+  <script>
+    function ajouterTemoignage() {
+      const nom = document.getElementById("nom").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (nom === "" || message === "") {
+        alert("Veuillez remplir tous les champs !");
+        return;
+      }
+
+      // Création du bloc témoignage
+      const temoignagesDiv = document.getElementById("temoignages");
+      const newTemoignage = document.createElement("div");
+      newTemoignage.classList.add("temoignage");
+
+      const h3 = document.createElement("h3");
+      h3.textContent = nom;
+
+      const p = document.createElement("p");
+      p.textContent = `"${message}"`;
+
+      newTemoignage.appendChild(h3);
+      newTemoignage.appendChild(p);
+      temoignagesDiv.prepend(newTemoignage); // ajout en haut de la liste
+
+      // Réinitialiser le formulaire
+      document.getElementById("nom").value = "";
+      document.getElementById("message").value = "";
+    }
+  </script>
+</body>
+</html>

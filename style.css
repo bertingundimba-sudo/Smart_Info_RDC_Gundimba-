@@ -1,0 +1,225 @@
+/* Global */
+body{
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Container */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+/* Boutons principaux */
+.button_1{
+  height:38px;
+  background:#0033A0; /* Bleu RDC */
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#FFD700; /* Jaune RDC */
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.button_1:hover{
+  background:#FF0000; /* Rouge RDC */
+  color:#ffffff;
+}
+
+/* Classes foncées */
+.dark{
+  padding:15px;
+  background:#0033A0; /* Bleu RDC */
+  color:#FFD700; /* Jaune RDC */
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header */
+header{
+  background:#0033A0; /* Bleu RDC */
+  color:#FFD700; /* Jaune RDC */
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#FF0000 3px solid; /* Rouge RDC */
+}
+
+header a{
+  color:#FFD700; /* Jaune RDC */
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#FF0000; /* Rouge RDC */
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#ffffff;
+  font-weight:bold;
+}
+
+/* Showcase */
+#showcase{
+  min-height:400px;
+  background:url('../img/showcase.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align:center;
+  color:#FFD700; /* Jaune RDC */
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/* Newsletter */
+#newsletter{
+  padding:15px;
+  color:#FFD700; /* Jaune RDC */
+  background:#0033A0; /* Bleu RDC */
+}
+
+#newsletter h1{
+  float:left;
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/* Boxes */
+#boxes{
+  margin-top:20px;
+}
+
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+  background:#FFD700; /* Jaune RDC */
+  border-radius:8px;
+  margin-bottom:15px;
+}
+
+#boxes .box img{
+  width:90px;
+}
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
+  border-radius:5px;
+  border:1px solid #0033A0; /* Bleu RDC */
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/* Services */
+ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #0033A0 solid 2px; /* Bleu RDC */
+  margin-bottom:5px;
+  background:#FFD700; /* Jaune RDC */
+  border-radius:5px;
+}
+
+/* Footer */
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#FFD700; /* Jaune RDC */
+  background-color:#0033A0; /* Bleu RDC */
+  text-align: center;
+  border-top:3px solid #FF0000; /* Rouge RDC */
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
+  }
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
+  }
+}

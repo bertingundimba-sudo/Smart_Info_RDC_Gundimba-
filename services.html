@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Smart Info RDC - Services de formation informatique à Gemena">
+    <meta name="keywords" content="informatique, formation, services, numérique, RDC, Gemena">
+    <meta name="author" content="Bertin Gundimba Konzi">
+    <title>Smart Info RDC | Services</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLAK8FfE/JpA12t5+1aN/c8a2b+l+k/s2lG/r5t6l/s5+t2lG/o1P9t1V8t5Fq/t2lG/q1P9t1V8t5Fq/" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      /* Styles pour la modale */
+      .modal {
+        display: none; /* Masqué par défaut */
+        position: fixed; /* Reste en place */
+        z-index: 1; /* Par-dessus tout */
+        left: 0;
+        top: 0;
+        width: 100%; /* Pleine largeur */
+        height: 100%; /* Pleine hauteur */
+        overflow: auto; /* Permet le défilement si nécessaire */
+        background-color: rgba(0,0,0,0.4); /* Arrière-plan semi-transparent */
+        padding-top: 60px;
+      }
+      
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto; /* 5% depuis le haut et centré horizontalement */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Pourrait être ajusté */
+        max-width: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s
+      }
+
+      /* Animation de l'ouverture */
+      @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+      }
+
+      .close-btn {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close-btn:hover,
+      .close-btn:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-content h3 {
+          text-align: center;
+          color: #333;
+      }
+
+      .modal-content form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+      }
+
+      .modal-content label {
+          font-weight: bold;
+      }
+
+      .modal-content input {
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Smart Info RDC</span> Gemena</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="about.html">À propos</a></li>
+            <li class="current"><a href="services.html">Services</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Abonnez-vous à notre Newsletter</h1>
+        <form>
+          <input type="email" placeholder="Entrez votre email..." required>
+          <button type="submit" class="button_1">S'abonner</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">Nos Formations & Services</h1>
+          <ul id="services">
+            <li>
+              <h3>Initiation à l’informatique</h3>
+              <p>Apprenez les bases de l’ordinateur, du système d’exploitation et des logiciels essentiels.</p>
+              <p><strong>Durée :</strong> 1 à 3 mois</p>
+              <p><strong>Prix :</strong> 150 000 FC</p>
+              <button class="button_1 register-btn" data-service="Initiation à l’informatique">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Bureautique (Word, Excel, PowerPoint)</h3>
+              <p>Maîtrisez la bureautique pour améliorer votre productivité.</p>
+              <p><strong>Durée :</strong> 1 à 2 mois</p>
+              <p><strong>Prix :</strong> 200 000 FC</p>
+              <button class="button_1 register-btn" data-service="Bureautique">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Internet et messagerie électronique</h3>
+              <p>Apprenez à naviguer et gérer vos communications en ligne.</p>
+              <p><strong>Durée :</strong> 1 mois</p>
+              <p><strong>Prix :</strong> 100 000 FC</p>
+              <button class="button_1 register-btn" data-service="Internet et messagerie électronique">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Maintenance et réparation des ordinateurs</h3>
+              <p>Diagnostiquez et réparez les pannes courantes des ordinateurs.</p>
+              <p><strong>Durée :</strong> 2 à 3 mois</p>
+              <p><strong>Prix :</strong> 300 000 FC</p>
+              <button class="button_1 register-btn" data-service="Maintenance et réparation">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Réseaux informatiques (LAN, WAN, TCP/IP)</h3>
+              <p>Formation sur la configuration et la gestion des réseaux locaux et étendus.</p>
+              <p><strong>Durée :</strong> 3 mois</p>
+              <p><strong>Prix :</strong> 400 000 FC</p>
+              <button class="button_1 register-btn" data-service="Réseaux informatiques">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Systèmes d’exploitation (Windows, Linux)</h3>
+              <p>Installation, configuration et gestion des OS les plus utilisés.</p>
+              <p><strong>Durée :</strong> 2 à 3 mois</p>
+              <p><strong>Prix :</strong> 250 000 FC</p>
+              <button class="button_1 register-btn" data-service="Systèmes d’exploitation">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Développement web (HTML, CSS, JavaScript)</h3>
+              <p>Apprenez à créer des sites web modernes et interactifs.</p>
+              <p><strong>Durée :</strong> 3 mois</p>
+              <p><strong>Prix :</strong> 500 000 FC</p>
+              <button class="button_1 register-btn" data-service="Développement web">S'inscrire</button>
+            </li>
+
+            <li>
+              <h3>Programmation (Python, Java, C++)</h3>
+              <p>Introduction aux langages de programmation les plus populaires.</p>
+              <p><strong>Durée :</strong> 3 à 6 mois</p>
+              <p><strong>Prix :</strong> 600 000 FC</p>
+              <button class="button_1 register-btn" data-service="Programmation">S'inscrire</button>
+            </li>
+          </ul>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Contactez-nous</h3>
+            <form class="quote">
+              <div>
+                <label>Nom complet</label><br>
+                <input type="text" placeholder="Votre nom complet" required>
+              </div>
+              <div>
+                <label>Email</label><br>
+                <input type="email" placeholder="Votre email" required>
+              </div>
+              <div>
+                <label>Message</label><br>
+                <textarea placeholder="Votre message..." required></textarea>
+              </div>
+              <button class="button_1" type="submit">Envoyer</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <p>Smart Info RDC (Informatique intelligente pour la RDC), créé par Bertin Gundimba Konzi &copy; 2025</p>
+      <div id="social-media">
+        <a href="https://www.facebook.com/bertin.gundimbakonzi" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.youtube.com/@SmartinfoRDC" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube-square"></i>
+        </a>
+        <a href="https://www.instagram.com/SmartInfoRDC/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram-square"></i>
+        </a>
+        <a href="https://wa.me/2439735651385" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp-square"></i>
+        </a>
+      </div>
+    </footer>
+
+    <div id="registrationModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="modal-title">Inscription au programme : </h3>
+        <form id="registrationForm">
+          <div>
+            <label for="fullname">Nom complet</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Votre nom complet" required>
+          </div>
+          <div>
+            <label for="email">Adresse mail</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+          <div>
+            <label for="phone">Numéro de téléphone (+243...)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+243..." pattern="^\+243[0-9]{9}$" required>
+          </div>
+          <button type="submit" class="button_1">Envoyer l'inscription</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Récupérer les éléments de la modale
+      var modal = document.getElementById("registrationModal");
+      var span = document.getElementsByClassName("close-btn")[0];
+      var modalTitle = document.getElementById("modal-title");
+
+      // Récupérer tous les boutons d'inscription
+      var registerBtns = document.querySelectorAll('.register-btn');
+      
+      // Ajouter un écouteur d'événement à chaque bouton
+      registerBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var serviceName = this.getAttribute('data-service');
+          modalTitle.textContent = "Inscription au programme : " + serviceName;
+          modal.style.display = "block";
+        });
+      });
+
+      // Quand l'utilisateur clique sur <span> (x), fermer la modale
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // Quand l'utilisateur clique n'importe où en dehors de la modale, la fermer
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      // Gérer la soumission du formulaire d'inscription
+      document.getElementById('registrationForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Empêcher l'envoi du formulaire par défaut
+
+          // Récupérer les valeurs du formulaire
+          var service = modalTitle.textContent.replace("Inscription au programme : ", "");
+          var fullname = document.getElementById('fullname').value;
+          var email = document.getElementById('email').value;
+          var phone = document.getElementById('phone').value;
+
+          // Ici, vous pouvez traiter les données (par exemple, les envoyer à un serveur ou les afficher en console)
+          console.log('Inscription reçue :');
+          console.log('Programme : ' + service);
+          console.log('Nom complet : ' + fullname);
+          console.log('Email : ' + email);
+          console.log('Téléphone : ' + phone);
+
+          alert("Votre inscription a été envoyée ! Nous vous contacterons bientôt.");
+
+          // Réinitialiser le formulaire et fermer la modale
+          this.reset();
+          modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

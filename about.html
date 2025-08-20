@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Smart Info RDC">
+    <meta name="keywords" content="informatique, formation, web design, numérique, RDC">
+    <meta name="author" content="Bertin Gundimba Konzi">
+    <title>Smart Info RDC | À propos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLAK8FfE/JpA12t5+1aN/c8a2b+l+k/s2lG/r5t6l/s5+t2lG/o1P9t1V8t5Fq/t2lG/q1P9t1V8t5Fq/" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* Styles pour les icônes de réseaux sociaux */
+      #social-media {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+        color: #fff;
+      }
+      #social-media a {
+        color: #fff;
+        font-size: 2em; /* Augmenter la taille des icônes */
+        transition: transform 0.3s ease-in-out;
+      }
+      #social-media a:hover {
+        transform: scale(1.2);
+        color: #e8491d; /* Changement de couleur au survol */
+      }
+      
+      /* Amélioration de la section "Ce que nous faisons" */
+      #sidebar .dark h3 {
+        color: #fff;
+        margin-top: 0;
+      }
+      #sidebar .dark ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      #sidebar .dark ul li {
+        margin-bottom: 10px;
+        padding-left: 1.2em;
+        position: relative;
+      }
+      #sidebar .dark ul li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #e8491d;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Smart Info RDC</span> Gemena</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="current"><a href="about.html">À propos</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="temoignages.html">Témoignages</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="newsletter">
+      <div class="container">
+        <h1>Abonnez-vous à notre Newsletter</h1>
+        <form>
+          <input type="email" placeholder="Entrez votre email..." required>
+          <button type="submit" class="button_1">S'abonner</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">À propos de nous</h1>
+          <p>
+            Smart Info RDC est une initiative née à Gemena, dans le Sud-Ubangi, avec pour objectif de combler le manque d'accès à des **formations informatiques pratiques et de qualité** en République Démocratique du Congo.
+            Notre mission est de former les jeunes, étudiants, professionnels et entrepreneurs aux outils numériques modernes, tout en favorisant la transformation digitale locale.
+          </p>
+          <p class="dark">
+            Nous proposons des formations accessibles et adaptées au contexte congolais, allant de la bureautique à la programmation, en passant par la maintenance et la création de solutions numériques locales.  
+            Notre vision est de devenir le **centre de référence en informatique** dans le Sud-Ubangi, et de nous étendre progressivement dans toute la RDC.
+          </p>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Ce que nous faisons</h3>
+            <ul>
+              <li>Nous développons et dispensons des formations pratiques en informatique.</li>
+              <li>Nous créons des applications web et mobiles adaptées aux besoins locaux.</li>
+              <li>Nous accompagnons les entrepreneurs dans leur transformation digitale.</li>
+              <li>Nous agissons comme un pont entre la jeunesse congolaise et les opportunités du numérique.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <p>Smart Info RDC (Informatique intelligente pour la RDC), créé par Ir. Bertin Gundimba Konzi &copy; 2025</p>
+      <div id="social-media">
+        <a href="https://www.facebook.com/bertin.gundimbakonzi" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.youtube.com/@SmartinfoRDC" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube-square"></i>
+        </a>
+        <a href="https://www.instagram.com/SmartInfoRDC/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram-square"></i>
+        </a>
+        <a href="https://wa.me/2439735651385" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp-square"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
